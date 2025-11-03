@@ -54,41 +54,41 @@ E-Commerce-Order-Tracking-System/
 
 🧰 Tools Used
 
-- Oracle Database 21c  
-- SQL / PL/SQL  
-- Visual Studio Code  
-- GitHub for version control
+1. Oracle Database 21c
+2. SQL / PL/SQL  
+3. Visual Studio Code  
+4. GitHub for version control
   
 🧾 Sample Outputs
 
-- Customer Summary Report  
-- Monthly Revenue Report  
-- Pending Deliveries Report  
+1. Customer Summary Report  
+2. Monthly Revenue Report  
+3. Pending Deliveries Report  
 
-📸 You can check the screenshots inside the `/05_Output_Snapshots/` folder.
+📸 check the screenshots inside the Screenshots folder.
 
 🎯 What I Learned
 
 This project helped me understand how real-world databases work.  
 I learned to:
 
-- Design proper database tables and relations  
-- Use identity columns for auto ID generation  
-- Write triggers and procedures to automate things  
-- Create reports using views  
-- Manage a project in a clean and structured way  
+1. Design proper database tables and relations  
+2. Use identity columns for auto ID generation  
+3. Write triggers and procedures to automate things  
+4. Create reports using views  
+5. Manage a project in a clean and structured way  
 
 ⚙️ How to Run
 
 1. Open Oracle SQL Developer 
 2. Run the scripts in this order:
 
-   sql
-   Tables.sql
-   Data.sql
-   Procedures.sql
-   Triggers.sql
-   Reports_Views.sql
+   .sql
+   1.Tables.sql
+   2.Data.sql
+   3.Procedures.sql
+   4.Triggers.sql
+   5.Reports_Views.sql
 
 Then check the outputs or run the reports manually.
 
