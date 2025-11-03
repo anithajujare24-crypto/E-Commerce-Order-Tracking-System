@@ -1,39 +1,28 @@
--- insert_data.sql
+-- insert sample data
+insert into customers (customer_name, email, phone, city) values ('meera n', 'meera2@gmail.com', '9876534984', 'bangalore');
+insert into customers (customer_name, email, phone, city) values ('vikam s', 'vikam2409@gmail.com', '8970483120', 'hyderabad');
+insert into customers (customer_name, email, phone, city) values ('raj k', 'rajkumar@gmail.com', '6309167428', 'chennai');
 
--- CUSTOMERS
-INSERT INTO customers (customer_name, email, phone, city) VALUES ('Anitha J', 'anitha@example.com', '9999999991', 'Bangalore');
-INSERT INTO customers (customer_name, email, phone, city) VALUES ('Ravi Kumar', 'ravi@example.com', '9999999992', 'Hyderabad');
-INSERT INTO customers (customer_name, email, phone, city) VALUES ('Sneha R', 'sneha@example.com', '9999999993', 'Chennai');
+insert into products (product_name, category, unit_price, stock_qty) values ('laptop', 'electronics', 650, 20);
+insert into products (product_name, category, unit_price, stock_qty) values ('Pen drive', 'accessories', 1200, 15);
+insert into products (product_name, category, unit_price, stock_qty) values ('tablet', 'electronics', 900, 10);
+insert into products (product_name, category, unit_price, stock_qty) values ('usb-c cable', 'accessories', 300, 50); 
 
--- PRODUCTS
-INSERT INTO products (product_name, category, unit_price, stock_qty)
-VALUES ('Wireless Mouse', 'Electronics', 650, 200);
-INSERT INTO products (product_name, category, unit_price, stock_qty)
-VALUES ('Laptop Bag', 'Accessories', 1200, 150);
-INSERT INTO products (product_name, category, unit_price, stock_qty)
-VALUES ('Keyboard', 'Electronics', 900, 100);
+insert into orders (customer_id, order_status, payment_status) values (1, 'processing', 'pending');
+insert into orders (customer_id, order_status, payment_status) values (2, 'shipped', 'paid');
+insert into orders (customer_id, order_status, payment_status) values (3, 'delivered', 'paid');
+-- an order cancelled 
+insert into orders (customer_id, order_status, payment_status) values (1, 'cancelled', 'refunded');
 
--- ORDERS
-INSERT INTO orders (customer_id, order_status, payment_status)
-VALUES (1, 'Processing', 'Pending');
-INSERT INTO orders (customer_id, order_status, payment_status)
-VALUES (2, 'Shipped', 'Paid');
-INSERT INTO orders (customer_id, order_status, payment_status)
-VALUES (3, 'Delivered', 'Paid');
+insert into order_items (order_id, product_id, quantity, unit_price, subtotal) values (1, 1, 2, 650, 1300);
+insert into order_items (order_id, product_id, quantity, unit_price, subtotal) values (2, 3, 1, 900, 900);
+insert into order_items (order_id, product_id, quantity, unit_price, subtotal) values (3, 2, 1, 1200, 1200);
+insert into order_items (order_id, product_id, quantity, unit_price, subtotal) values (4, 4, 2, 300, 600); 
 
--- ORDER_ITEMS
-INSERT INTO order_items (order_id, product_id, quantity, unit_price, subtotal)
-VALUES (1, 1, 2, 650, 1300);
-INSERT INTO order_items (order_id, product_id, quantity, unit_price, subtotal)
-VALUES (2, 3, 1, 900, 900);
-INSERT INTO order_items (order_id, product_id, quantity, unit_price, subtotal)
-VALUES (3, 2, 1, 1200, 1200);
+insert into payments (order_id, amount, payment_mode) values (2, 900, 'card');
+insert into payments (order_id, amount, payment_mode) values (3, 1200, 'upi');
+-- refunded payment entry
+insert into payments (order_id, amount, payment_mode, payment_date) values (4, 600, 'upi', sysdate);
 
--- PAYMENTS
-INSERT INTO payments (order_id, amount, payment_mode)
-VALUES (2, 900, 'Card');
-INSERT INTO payments (order_id, amount, payment_mode)
-VALUES (3, 1200, 'UPI');
-
-COMMIT;
+commit;
 /
