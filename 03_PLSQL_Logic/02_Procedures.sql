@@ -118,3 +118,4 @@ begin
     end loop;
 end;
 /
+commit;

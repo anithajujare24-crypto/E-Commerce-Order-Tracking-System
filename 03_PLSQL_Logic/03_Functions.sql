@@ -65,5 +65,9 @@ begin
     where o.customer_id = p_customer_id;
 
     return v_spent;
+EXCEPTION
+    when others THEN
+    return 0;
 end;
 /
+commit;

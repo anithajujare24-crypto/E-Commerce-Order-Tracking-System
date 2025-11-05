@@ -14,3 +14,4 @@ where lower(o.order_status) not in ('delivered', 'cancelled')
 order by o.order_date desc;
 /
 select * from v_pending_deliveries;
+commit;

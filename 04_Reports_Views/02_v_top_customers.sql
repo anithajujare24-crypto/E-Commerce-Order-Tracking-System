@@ -14,3 +14,4 @@ order by total_spent desc
 fetch first 3 rows only;
 /
 select * from v_top_customers;
+commit;

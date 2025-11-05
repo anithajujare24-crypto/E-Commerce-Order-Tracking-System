@@ -8,7 +8,7 @@ select
 from orders o
 join payments p on o.order_id = p.order_id
 group by to_char(o.order_date, 'mon-yyyy')
-order by min(o.order_date);
+order by to_date(to_char(o.order_date,'mon-yyyy'), 'mon-yyyy');
 /
+commit;
 select * from v_monthly_revenue;
-

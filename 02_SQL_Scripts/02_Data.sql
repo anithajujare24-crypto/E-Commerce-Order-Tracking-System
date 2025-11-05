@@ -14,15 +14,20 @@ insert into orders (customer_id, order_status, payment_status) values (3, 'deliv
 -- an order cancelled 
 insert into orders (customer_id, order_status, payment_status) values (1, 'cancelled', 'refunded');
 
-insert into order_items (order_id, product_id, quantity, unit_price, subtotal) values (1, 1, 2, 650, 1300);
-insert into order_items (order_id, product_id, quantity, unit_price, subtotal) values (2, 3, 1, 900, 900);
-insert into order_items (order_id, product_id, quantity, unit_price, subtotal) values (3, 2, 1, 1200, 1200);
-insert into order_items (order_id, product_id, quantity, unit_price, subtotal) values (4, 4, 2, 300, 600); 
+insert into order_items (order_id, product_id, quantity, unit_price, subtotal) values (5, 1, 2, 650, 1300);
+insert into order_items (order_id, product_id, quantity, unit_price, subtotal) values (6, 3, 1, 900, 900);
+insert into order_items (order_id, product_id, quantity, unit_price, subtotal) values (7, 2, 1, 1200, 1200);
+insert into order_items (order_id, product_id, quantity, unit_price, subtotal) values (8, 4, 2, 300, 600); 
 
-insert into payments (order_id, amount, payment_mode) values (2, 900, 'card');
-insert into payments (order_id, amount, payment_mode) values (3, 1200, 'upi');
+insert into payments (order_id, amount, payment_mode) values (5, 900, 'card');
+insert into payments (order_id, amount, payment_mode) values (6, 1200, 'upi');
 -- refunded payment entry
-insert into payments (order_id, amount, payment_mode, payment_date) values (4, 600, 'upi', sysdate);
+insert into payments (order_id, amount, payment_mode) values (8, 7300, 'upi');
 
+insert into order_audit_log(order_id, old_status, new_status, changed_by, remarks) values (5, 'pending', 'shipped', 'admin', 'order_shipped');
 commit;
+select * from orders;
+select * from payments;
+select * from order_items;
+select * from order_audit_log;
 /

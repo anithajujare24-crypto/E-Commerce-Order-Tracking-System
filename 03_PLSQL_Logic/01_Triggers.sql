@@ -1,3 +1,4 @@
+
 -- triggers.sql
 -- prevent inserting order items when stock is insufficient
 create or replace trigger trg_check_stock
@@ -44,3 +45,4 @@ begin
     values (:new.order_id, null, :new.order_status, user, 'new order created');
 end;
 /
+commit;
