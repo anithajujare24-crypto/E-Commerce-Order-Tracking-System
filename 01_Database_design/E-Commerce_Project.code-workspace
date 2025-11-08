@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../02_SQL_Scripts"
+		},
+		{
+			"path": "../03_PLSQL_Logic"
+		},
+		{
+			"path": "../04_Reports_Views"
+		},
+		{
+			"path": "../05_Screenshots"
+		}
+	]
+}

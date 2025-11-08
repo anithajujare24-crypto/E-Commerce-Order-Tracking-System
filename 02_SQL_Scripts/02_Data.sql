@@ -1,4 +1,10 @@
--- insert sample data
+-- =========================================================
+-- Script Name : 02_Data.sql
+-- Project     : E-Commerce Order Tracking System
+-- Author      : J. Anitha
+-- Purpose     : Insert sample data into database tables
+-- =========================================================
+
 insert into customers (customer_name, email, phone, city) values ('meera n', 'meera2@gmail.com', '9876534984', 'bangalore');
 insert into customers (customer_name, email, phone, city) values ('vikam s', 'vikam2409@gmail.com', '8970483120', 'hyderabad');
 insert into customers (customer_name, email, phone, city) values ('raj k', 'rajkumar@gmail.com', '6309167428', 'chennai');
@@ -26,6 +32,8 @@ insert into payments (order_id, amount, payment_mode) values (8, 7300, 'upi');
 
 insert into order_audit_log(order_id, old_status, new_status, changed_by, remarks) values (5, 'pending', 'shipped', 'admin', 'order_shipped');
 commit;
+
+-- Verifying inserted records from all table
 select * from orders;
 select * from payments;
 select * from order_items;
