@@ -12,11 +12,11 @@ Basically, it’s like a small version of how real online stores manage their da
 
 🧩 How It Works
 
-1. Database Design – I designed all the tables and connections between them  
-2. Table Creation – Wrote SQL scripts to create tables for customers, orders, and payments  
-3. Data Insertion – Added some sample data for testing  
-4. PL/SQL Logic – Added triggers and procedures for automation  
-5. Reports and Views – Created summary reports like total revenue and pending deliveries  
+1. Database Design – I designed all the tables and connections between them.
+2. Table Creation – Wrote SQL scripts to create tables for customers, orders, and payments.  
+3. Data Insertion – Added some sample data for testing.
+4. PL/SQL Logic – Added triggers and procedures for automation.  
+5. Reports and Views – Created summary reports like total revenue and pending deliveries.  
 
 📂 Project Structure
 
@@ -46,11 +46,11 @@ E-Commerce-Order-Tracking-System/
 
 💡 Highlights
 
-1. Automatically generates IDs using Oracle identity columns  
-2. Tracks orders and payments in real time  
-3. Keeps the data consistent with triggers and constraints  
-4. Shows easy-to-read summary reports  
-5. Clean folder structure so it’s simple to follow  
+1. Automatically generates IDs using Oracle identity columns.  
+2. Tracks orders and payments in real time.  
+3. Keeps the data consistent with triggers and constraints.  
+4. Shows easy-to-read summary reports. 
+5. Clean folder structure so it’s simple to follow.  
 
 🧰 Tools Used
 
@@ -72,11 +72,11 @@ E-Commerce-Order-Tracking-System/
 This project helped me understand how real-world databases work.  
 I learned to:
 
-1. Design proper database tables and relations  
-2. Use identity columns for auto ID generation  
-3. Write triggers and procedures to automate things  
-4. Create reports using views  
-5. Manage a project in a clean and structured way  
+1. Design proper database tables and relations.  
+2. Use identity columns for auto ID generation.  
+3. Write triggers and procedures to automate things.  
+4. Create reports using views.  
+5. Manage a project in a clean and structured way.  
 
 ⚙️ How to Run
 
